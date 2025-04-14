@@ -119,8 +119,8 @@
 
 为了帮助用户体验量子计算的实际应用，您可以按照以下步骤获取真机调用资格：
 
-1. 注册 [量子计算平台 ](https://platform.qboson.com/)账号。
-2. 完成平台的新手引导并获取真机调用额度。
+1. 注册 [相干光量子计算云平台](https://platform.qboson.com/)账号。
+2. 完成平台的 SDK 新手引导并获取真机调用额，参考 [文档](https://platform.qboson.com/resource/beginner_tutorial)。 
 
 ### 运行第一个案例
 
