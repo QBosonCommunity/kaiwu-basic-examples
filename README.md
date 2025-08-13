@@ -168,7 +168,7 @@ kaiwu-basic-examples/
    - [GitHub Issues](https://github.com/QBosonCommunity/kaiwu-basic-examples/issues)
 
 3. **邮件联系**：
-   - support@qboson-community.org
+   - business@boseq.com
 
 ## 致谢
 
