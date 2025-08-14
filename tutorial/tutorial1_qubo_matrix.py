@@ -1,40 +1,46 @@
+# Import numpy and kaiwu
 import numpy as np
-import kaiwu as kw
 import pandas as pd
+import kaiwu as kw
 
-# Define the input adjacency matrix for the graph
-adj_matrix = np.array([
-    [0, 1, 0, 1, 1, 0, 0, 1, 1, 0],
-    [1, 0, 1, 0, 0, 1, 1, 1, 0, 0],
-    [0, 1, 0, 1, 1, 0, 0, 0, 1, 0],
-    [1, 0, 1, 0, 0, 1, 1, 0, 1, 0],
-    [1, 0, 1, 0, 0, 1, 0, 1, 0, 1],
-    [0, 1, 0, 1, 1, 0, 0, 0, 1, 1],
-    [0, 1, 0, 1, 0, 0, 0, 0, 0, 1],
-    [1, 1, 0, 0, 1, 0, 0, 0, 1, 0],
-    [1, 0, 1, 1, 0, 1, 0, 1, 0, 1],
-    [0, 0, 0, 0, 1, 1, 1, 0, 1, 0]])
+# Import distance matrix
+w = np.array([[ 0, 13, 11, 16,  8],
+              [13,  0,  7, 14,  9],
+              [11,  7,  0, 10,  9],
+              [16, 14, 10,  0, 12],
+              [ 8,  9,  9, 12,  0]])
 
-# Get the number of nodes in the graph
-num_nodes = len(adj_matrix)
+# Get the number of nodes
+n = w.shape[0]
 
-# Create a QUBO variable array 'x' with 'num_nodes' variables
-# each representing a node in the graph
-x = kw.qubo.ndarray(num_nodes, 'x', kw.qubo.Binary)
+# Create qubo variable matrix
+x = kw.qubo.ndarray((n, n), "x", kw.qubo.Binary)
 
-# Define the objective function for the QUBO model of Max cut problem
-obj = -x.T @ adj_matrix @ (1 - x)
+# Get sets of edge and non-edge pairs
+edges = [(u, v) for u in range(n) for v in range(n) if w[u, v] != 0]
+no_edges = [(u, v) for u in range(n) for v in range(n) if w[u, v] == 0]
 
-# parse QUBO
-obj = kw.qubo.make(obj)
+def is_edge_used(x, u, v):
+    return kw.qubo.quicksum([x[u, j] * x[v, j + 1] for j in range(-1, n - 1)])
 
-# Extract the QUBO matrix and store it in a pandas DataFrame
-qubo_matrix = kw.qubo.qubo_model_to_qubo_matrix(obj)['qubo_matrix']
+qubo_model = kw.qubo.QuboModel()
+# TSP path cost
+qubo_model.set_objective(kw.qubo.quicksum([w[u, v] * is_edge_used(x, u, v) for u, v in edges]))
 
-# Check whether the QUBO matrix satisfy the precision requirement
-kw.qubo.check_qubo_matrix_bit_width(qubo_matrix)
+# Node constraint: Each node must belong to exactly one position
+qubo_model.add_constraint(x.sum(axis=0) == 1, "sequence_cons", penalty=20.0)
 
-# Save the QUBO matrix to a CSV file without including index or header
-df = pd.DataFrame(qubo_matrix)
-csv_file_path = 'qubo_matrix.csv'
-df.to_csv(csv_file_path, index=False, header=False)
+# Position constraint: Each position can have only one node
+qubo_model.add_constraint(x.sum(axis=1) == 1, "node_cons", penalty=20.0)
+
+# Edge constraint: Pairs without edges cannot appear in the path
+qubo_model.add_constraint(kw.qubo.quicksum([is_edge_used(x, u, v) for u, v in no_edges]),
+    "connect_cons", penalty=20.0)
+# Perform calculation using SA optimizer
+solver = kw.solver.SimpleSolver(kw.classical.SimulatedAnnealingOptimizer(initial_temperature=100,
+                                                                         alpha=0.99,
+                                                                         cutoff_temperature=0.001,
+                                                                         iterations_per_t=10,
+                                                                         size_limit=100))
+
+sol_dict, qubo_val = solver.solve_qubo(qubo_model)    
