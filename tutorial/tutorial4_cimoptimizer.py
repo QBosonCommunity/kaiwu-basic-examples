@@ -2,7 +2,8 @@
 import numpy as np
 import pandas as pd
 import kaiwu as kw
-
+kw.common.CheckpointManager.save_dir = "/tmp"
+kw.license.init(user_id="xxxxxxx", sdk_code="xxxxxxxxxx")
 # Import distance matrix
 w = np.array([[ 0, 13, 11, 16,  8],
               [13,  0,  7, 14,  9],
@@ -43,4 +44,6 @@ solver = kw.solver.SimpleSolver(kw.classical.SimulatedAnnealingOptimizer(initial
                                                                          iterations_per_t=10,
                                                                          size_limit=100))
 
-sol_dict, qubo_val = solver.solve_qubo(qubo_model) 
+sol_dict, qubo_val = solver.solve_qubo(qubo_model)
+print(sol_dict)
+print(qubo_val)

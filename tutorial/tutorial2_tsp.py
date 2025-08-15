@@ -5,7 +5,8 @@ TSP问题调用真机求解
 import numpy as np
 import pandas as pd
 import kaiwu as kw
-
+kw.common.CheckpointManager.save_dir = "/tmp"
+kw.license.init(user_id="xxxxxxx", sdk_code="xxxxxxx")
 
 def is_edge_used(var_x, var_u, var_v):
     """
@@ -55,3 +56,4 @@ if __name__ == '__main__':
 
     qubo_mat = qubo_model.get_matrix()
     pd.DataFrame(qubo_mat).to_csv("tsp.csv", index=False, header=False)
+    print(qubo_mat)

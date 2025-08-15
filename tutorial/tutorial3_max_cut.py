@@ -1,9 +1,9 @@
 import numpy as np
 import kaiwu as kw
-
+kw.common.CheckpointManager.save_dir = "/tmp"
+kw.license.init(user_id="xxxxxx", sdk_code="xxxxxxxx")
 # Import the plotting library
 import matplotlib.pyplot as plt
-
 # invert input graph matrix
 matrix = -np.array([
                 [0, 1, 0, 1, 1, 0, 0, 1, 1, 0],
@@ -16,7 +16,7 @@ matrix = -np.array([
                 [1, 1, 0, 0, 1, 0, 0, 0, 1, 0],
                 [1, 0, 1, 1, 0, 1, 0, 1, 0, 1],
                 [0, 0, 0, 0, 1, 1, 1, 0, 1, 0]])
-                
+               
 worker = kw.classical.SimulatedAnnealingOptimizer(initial_temperature=100,
                                                   alpha=0.99,
                                                   cutoff_temperature=0.001,
