@@ -107,7 +107,7 @@ Before you begin, you need to install the `kaiwu-sdk` dependency:
 
 1. **Get the SDK**:
    - Visit the [kaiwu-sdk download page](https://platform.qboson.com/sdkDownload) (account registration required).
-   - See the [kaiwu-sdk installation guide](https://kaiwu-sdk-docs.qboson.com/zh/latest/).
+   - See the [kaiwu-sdk installation guide](https://kaiwu.qboson.com/plugin.php?id=knowledge&modac=docs&link=package&name=%E6%A8%A1%E5%9D%97%E6%8C%87%E5%8D%97).
 
 2. **Configure Authorization**:
    Obtain your SDK authorization credentials:
@@ -122,7 +122,7 @@ Before you begin, you need to install the `kaiwu-sdk` dependency:
 To help you experience the practical application of quantum computing, you can follow these steps to get access to a real machine:
 
 1. Register an account on the [Coherent Ising Machine Cloud Platform](https://platform.qboson.com/).
-2. Complete the platform's SDK beginner tutorial to get credits for real machine calls. Refer to the [documentation](https://platform.qboson.com/resource/beginner_tutorial). 
+2. Complete the platform's SDK beginner tutorial to get credits for real machine calls. Refer to the [documentation](https://kaiwu-sdk-docs.qboson.com/en/latest/). 
 
 ### Running Your First Example
 
@@ -182,7 +182,7 @@ kaiwu-basic-examples/
    - [GitHub Issues](https://github.com/QBosonCommunity/kaiwu-basic-examples/issues)
 
 3. **Contact via Email**:
-   - business@boseq.com
+   - developer@boseq.com
 
 ## Acknowledgments
 
