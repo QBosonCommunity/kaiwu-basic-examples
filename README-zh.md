@@ -105,7 +105,7 @@
 
 1. **获取 SDK**：
    - 访问 [kaiwu-sdk 下载地址](https://platform.qboson.com/sdkDownload)（需要注册账号）
-   - 查看 [kaiwu-sdk 安装说明](https://kaiwu-sdk-docs.qboson.com/zh/latest/)
+   - 查看 [kaiwu-sdk 安装说明](https://kaiwu.qboson.com/plugin.php?id=knowledge&modac=docs&link=KaiwuSDK&name=%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)
 
 2. **配置授权信息**：
    获取您的 SDK 授权信息：
@@ -121,7 +121,7 @@
 为了帮助用户体验量子计算的实际应用，您可以按照以下步骤获取真机调用资格：
 
 1. 注册 [相干光量子计算云平台](https://platform.qboson.com/)账号。
-2. 完成平台的 SDK 新手引导并获取真机调用额，参考 [文档](https://platform.qboson.com/resource/beginner_tutorial)。 
+2. 完成平台的 SDK 新手引导并获取真机调用额，参考 [文档](https://kaiwu-sdk-docs.qboson.com/en/latest/)。 
 
 ### 运行第一个案例
 ```python
@@ -177,7 +177,7 @@ kaiwu-basic-examples/
    - [GitHub Issues](https://github.com/QBosonCommunity/kaiwu-basic-examples/issues)
 
 3. **邮件联系**：
-   - business@boseq.com
+   - developer@boseq.com
 
 ## 致谢
 
