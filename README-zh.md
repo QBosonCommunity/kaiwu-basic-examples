@@ -105,7 +105,7 @@
 
 1. **获取 SDK**：
    - 访问 [kaiwu-sdk 下载地址](https://platform.qboson.com/sdkDownload)（需要注册账号）
-   - 查看 [kaiwu-sdk 安装说明](https://kaiwu-sdk-docs.qboson.com/zh/source/sdk_installation_instructions.html)
+   - 查看 [kaiwu-sdk 安装说明](https://kaiwu-sdk-docs.qboson.com/zh/latest/)
 
 2. **配置授权信息**：
    获取您的 SDK 授权信息：
