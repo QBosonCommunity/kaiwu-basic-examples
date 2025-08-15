@@ -2,6 +2,9 @@
 import numpy as np
 import pandas as pd
 import kaiwu as kw
+kw.common.CheckpointManager.save_dir = "/tmp"
+kw.license.init(user_id="xxxxxxx", sdk_code="xxxxxxx")
+
 
 # Import distance matrix
 w = np.array([[ 0, 13, 11, 16,  8],
@@ -37,6 +40,7 @@ qubo_model.add_constraint(x.sum(axis=1) == 1, "node_cons", penalty=20.0)
 qubo_model.add_constraint(kw.qubo.quicksum([is_edge_used(x, u, v) for u, v in no_edges]),
     "connect_cons", penalty=20.0)
 # Perform calculation using SA optimizer
+# optimizer = kw.cim.PrecisionReducer(optimizer, 8)  # 8位精度
 solver = kw.solver.SimpleSolver(kw.classical.SimulatedAnnealingOptimizer(initial_temperature=100,
                                                                          alpha=0.99,
                                                                          cutoff_temperature=0.001,
@@ -44,3 +48,5 @@ solver = kw.solver.SimpleSolver(kw.classical.SimulatedAnnealingOptimizer(initial
                                                                          size_limit=100))
 
 sol_dict, qubo_val = solver.solve_qubo(qubo_model)    
+print(sol_dict)
+print(qubo_val)
