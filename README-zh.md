@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/Python-3.8%2B-blue" alt="Python Version">
+<img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python Version">
 <img src="https://img.shields.io/badge/License-Apache%202.0-green" alt="License">
 
 ## 项目简介
@@ -79,7 +79,7 @@
 1. **创建并激活环境**：
    ```bash
    # 推荐使用 conda 创建新环境
-   conda create -n quantum_env python=3.8
+   conda create -n quantum_env python=3.10
    conda activate quantum_env
    ```
 

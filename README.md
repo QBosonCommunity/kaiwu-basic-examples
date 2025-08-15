@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/Python-3.8%2B-blue" alt="Python Version">
+<img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python Version">
 <img src="https://img.shields.io/badge/License-Apache%202.0-green" alt="License">
 
 [中文版本](README-zh.md)
@@ -63,7 +63,7 @@ By participating in this project, you can not only deepen your understanding of 
 
 ### Requirements
 
-- Python 3.8+
+- Python 3.10+
 - NumPy >= 1.19.0
 - Pandas >= 1.0.0
 - Matplotlib >= 3.0.0
@@ -81,7 +81,7 @@ By participating in this project, you can not only deepen your understanding of 
 1. **Create and Activate Environment**:
    ```bash
    # It is recommended to use conda to create a new environment
-   conda create -n quantum_env python=3.8
+   conda create -n quantum_env python=3.10
    conda activate quantum_env
    ```
 
