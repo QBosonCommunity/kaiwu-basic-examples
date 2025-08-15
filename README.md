@@ -1,176 +1,195 @@
 <img src="https://img.shields.io/badge/Python-3.8%2B-blue" alt="Python Version">
 <img src="https://img.shields.io/badge/License-Apache%202.0-green" alt="License">
 
-## 项目简介
+[中文版本](README-zh.md)
 
-`kaiwu-basic-examples` 是一个专注于量子优化问题的开源案例集，旨在通过实践帮助开发者和研究人员快速入门量子优化领域。本项目为希望从零开始学习量子优化的用户提供了系统化的学习路径，涵盖从基础概念到实际案例的全流程，社区的目标是：
+## Project Introduction
 
-- **普及知识**：帮助用户理解量子优化问题的核心概念及其建模方法。更多请参考 [社区文档](https://kaiwu.qboson.com/plugin.php?id=knowledge)。
-- **实践能力**：通过真实案例学习如何使用 Python 实现量子优化算法。
-- **社区成长**：培养用户从学习者到社区贡献者的转变，推动社区共同进步。
+`kaiwu-basic-examples` is an open-source collection of examples focused on quantum optimization problems, designed to help developers and researchers get started in the field of quantum optimization through hands-on practice. This project provides a systematic learning path for users who want to learn quantum optimization from scratch, covering the entire process from basic concepts to practical examples. The community's goals are:
 
-本项目不仅是一个工具，更是一个学习与成长的平台。无论您是量子计算的新手，还是有经验的开发者，都可以从中获益。
+- **Knowledge Popularization**: Help users understand the core concepts of quantum optimization problems and their modeling methods. For more information, please refer to the [Community Documentation](https://kaiwu.qboson.com/plugin.php?id=knowledge).
+- **Practical Skills**: Learn how to implement quantum optimization algorithms using Python through real-world examples.
+- **Community Growth**: Foster the transition of users from learners to contributors, promoting the collective progress of the community.
 
-## 贡献指南
+This project is not just a tool, but a platform for learning and growth. Whether you are a beginner in quantum computing or an experienced developer, you can benefit from it.
 
-### 贡献的意义
+## Contribution Guide
 
-通过参与本项目，您不仅可以加深对量子优化问题的理解，还能为社区贡献力量，帮助其他学习者成长；另外我们也在量子开发实验室中，提供前沿的技术研究课题，并予以贡献者一定的奖励，希望通过您的参与，逐步建立一个充满活力的学习型、贡献型社区。
+### Why Contribute?
 
-### 如何开始贡献？
+By participating in this project, you can not only deepen your understanding of quantum optimization problems but also contribute to the community and help other learners grow. We also offer cutting-edge research topics in our quantum development lab and provide certain rewards to contributors. We hope to build a vibrant learning and contribution-oriented community with your participation.
 
-1. **报告问题**：
-   - 如果您发现 Bug 或有改进建议，请在 GitHub Issues 中提交。
-   - 提交时请描述清楚问题背景和复现步骤。
+### How to Start Contributing?
 
-2. **贡献代码**： 
-   - 根据任务要求，编写代码实现。
-   - 通过 Fork 仓库、创建分支的方式提交代码。
-   - 提交前请确保代码通过测试，并符合项目规范。
+1. **Report Issues**:
+   - If you find a bug or have suggestions for improvement, please submit them in GitHub Issues.
+   - When submitting, please describe the context of the problem and the steps to reproduce it clearly.
 
-3. **参与讨论**：
-   - 在 GitHub Discussions 中参与功能讨论或分享经验。
+2. **Contribute Code**: 
+   - Write code according to the task requirements.
+   - Submit code by forking the repository and creating a branch.
+   - Before submitting, please ensure that the code passes tests and complies with the project's standards.
 
-### 代码提交流程
+3. **Participate in Discussions**:
+   - Participate in feature discussions or share your experience in GitHub Discussions.
 
-1. **Fork 仓库**：
-   - 点击 `Fork` 按钮，将项目复制到自己的账户。
+### Code Contribution Workflow
 
-2. **克隆代码**：
+1. **Fork the Repository**:
+   - Click the `Fork` button to copy the project to your own account.
+
+2. **Clone the Code**:
    ```bash
-   git clone https://github.com/用户名/kaiwu-basic-examples.git
+   git clone https://github.com/your-username/kaiwu-basic-examples.git
    cd kaiwu-basic-examples
    ```
 
-3. **创建分支**：
+3. **Create a Branch**:
    ```bash
-   git checkout -b feature/功能名称
+   git checkout -b feature/your-feature-name
    ```
 
-4. **提交代码**：
+4. **Commit Your Code**:
    ```bash
    git add .
-   git commit -m "描述提交内容"
-   git push origin feature/功能名称
+   git commit -m "Describe your changes"
+   git push origin feature/your-feature-name
    ```
 
-5. **发起 Pull Request**：
-   - 在 GitHub 上点击 `New Pull Request`，填写更改说明。
+5. **Create a Pull Request**:
+   - On GitHub, click `New Pull Request` and fill in the description of your changes.
 
-## 快速开始
+## Quick Start
 
-### 安装要求
+### Requirements
 
 - Python 3.8+
 - NumPy >= 1.19.0
 - Pandas >= 1.0.0
 - Matplotlib >= 3.0.0
 - Networkx >= 2.0
-- Pytest >= 7.0.0 (用于测试)
+- Pytest >= 7.0.0 (for testing)
 
-### 代码风格
+### Code Style
 
-- 遵循PEP 8规范
-- 使用类型注解
-- 编写详细的文档字符串
+- Follow PEP 8 guidelines
+- Use type annotations
+- Write detailed docstrings
 
-### 安装步骤
+### Installation Steps
 
-1. **创建并激活环境**：
+1. **Create and Activate Environment**:
    ```bash
-   # 推荐使用 conda 创建新环境
+   # It is recommended to use conda to create a new environment
    conda create -n quantum_env python=3.8
    conda activate quantum_env
    ```
 
-2. **克隆本仓库到本地**：
+2. **Clone this repository**:
    ```bash
    git clone https://github.com/QBosonCommunity/kaiwu-basic-examples.git
    cd kaiwu-basic-examples
    ```
 
-3. **安装依赖包**：
+3. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **开发模式安装（可选）**：
+4. **Install in Development Mode (Optional)**:
    ```bash
    pip install -e .
    ```
 
-### kaiwu-sdk 安装说明（必需）
+### kaiwu-sdk Installation (Required)
 
-在开始使用之前，您需要安装 kaiwu-sdk 依赖包：
+Before you begin, you need to install the `kaiwu-sdk` dependency:
 
-1. **获取 SDK**：
-   - 访问 [kaiwu-sdk 下载地址](https://platform.qboson.com/sdkDownload)（需要注册账号）
-   - 查看 [kaiwu-sdk 安装说明](https://kaiwu-sdk-docs.qboson.com/zh/source/sdk_installation_instructions.html)
+1. **Get the SDK**:
+   - Visit the [kaiwu-sdk download page](https://platform.qboson.com/sdkDownload) (account registration required).
+   - See the [kaiwu-sdk installation guide](https://kaiwu-sdk-docs.qboson.com/en/source/sdk_installation_instructions.html).
 
-2. **配置授权信息**：
-   获取您的 SDK 授权信息：
+2. **Configure Authorization**:
+   Obtain your SDK authorization credentials:
    ```
-   用户ID: <your-user-id>
-   SDK授权码: <your-sdk-token>
+   User ID: <your-user-id>
+   SDK Token: <your-sdk-token>
    ```
-   > 请将以上信息替换为您的实际授权信息
+   > Please replace the above with your actual credentials.
 
-### 获取真机调用资格
+### Getting Access to a Real Quantum Computer
 
-为了帮助用户体验量子计算的实际应用，您可以按照以下步骤获取真机调用资格：
+To help you experience the practical application of quantum computing, you can follow these steps to get access to a real machine:
 
-1. 注册 [相干光量子计算云平台](https://platform.qboson.com/)账号。
-2. 完成平台的 SDK 新手引导并获取真机调用额，参考 [文档](https://platform.qboson.com/resource/beginner_tutorial)。 
+1. Register an account on the [Coherent Ising Machine Cloud Platform](https://platform.qboson.com/).
+2. Complete the platform's SDK beginner tutorial to get credits for real machine calls. Refer to the [documentation](https://platform.qboson.com/resource/beginner_tutorial). 
 
-### 运行第一个案例
+### Running Your First Example
 
-以下是运行 QUBO 矩阵的构建和求解的示例代码：
-
+Replace this line in the example code:
 ```python
-python tutorial/tutorial1_qubo_matrix.py
+kw.license.init(user_id="xxxxxxx", sdk_code="xxxxxxx")
 ```
 
-通过此案例，您可以快速调用函数并进行求解。
+For example (this is not a real account, please apply for one on the cloud platform):
+```python
+kw.license.init(user_id="39302589031902227330", sdk_code="v1A22GNmyhP063a4t7Osa2HsAMkuaB")
+```
 
-## 案例示例
+Here is an example of how to run the QUBO matrix construction and solving script:
+```bash
+python tutorial/tutorial1_qubo_matrix.py
+```
+This example will help you quickly call the functions and solve a problem.
 
-### 经典优化问题
-- [QUBO矩阵](tutorial/tutorial1_qubo_matrix.py): 基础QUBO模型构建和求解
-- [TSP问题](tutorial/tutorial2_tsp.py): 旅行商问题的QUBO建模
-- [Max Cut问题](tutorial/tutorial3_max_cut.py): 最大割问题求解示例
-- [提交TSP任务到真机](tutorial/tutorial4_cimoptimizer.py): TSP问题使用真机求解示例
+## Example Cases
 
-### 经典优化问题(notebook)
-- [QUBO矩阵](tutorial/notebook/tutorial1_qubo_matrix.ipynb): 基础QUBO模型构建和求解
-- [TSP问题](tutorial/notebook/tutorial2_tsp.ipynb): 旅行商问题的QUBO建模
-- [Max Cut问题](tutorial/notebook/tutorial3_max_cut.ipynb): 最大割问题求解示例
+### Classical Optimization Problems
+- [QUBO Matrix](tutorial/tutorial1_qubo_matrix.py): Basic QUBO model construction and solving.
+- [TSP Problem](tutorial/tutorial2_tsp.py): QUBO modeling for the Traveling Salesman Problem.
+- [Max Cut Problem](tutorial/tutorial3_max_cut.py): Example of solving the Max Cut problem.
+- [Submit TSP Task to a Real Machine](tutorial/tutorial4_cimoptimizer.py): Example of solving the TSP problem using a real machine.
 
-## 目录结构
+### Classical Optimization Problems (Notebook)
+- [QUBO Matrix](tutorial/notebook/tutorial1_qubo_matrix.ipynb): Basic QUBO model construction and solving.
+- [TSP Problem](tutorial/notebook/tutorial2_tsp.ipynb): QUBO modeling for the Traveling Salesman Problem.
+- [Max Cut Problem](tutorial/notebook/tutorial3_max_cut.ipynb): Example of solving the Max Cut problem.
+
+## Directory Structure
 
 ```
 kaiwu-basic-examples/
-├── examples/ 
-│   ├── qubo_matrix_modeling.py     # QUBO 矩阵建模案例
-│   ├── traveling_salesman.py       # 旅行商问题案例
-│   ├── max_cut.py                  # 最大割问题案例
-│   └── optimization.py             # 量子计算机提交任务实践
-├── requirements.txt                # 依赖包列表
-├── setup.py                        # 安装脚本
-└── README.md                       # 本文档
+├── tutorial/
+│   ├── notebook/
+│   │   ├── tutorial1_qubo_matrix.ipynb     # QUBO Matrix notebook
+│   │   ├── tutorial2_tsp.ipynb             # TSP notebook
+│   │   └── tutorial3_max_cut.ipynb         # Max Cut notebook
+│   ├── tutorial1_qubo_matrix.py            # QUBO Matrix example
+│   ├── tutorial2_tsp.py                    # TSP example
+│   ├── tutorial3_max_cut.py                # Max Cut example
+│   └── tutorial4_cimoptimizer.py           # CIM Optimizer example
+├── requirements.txt                        # List of dependencies
+├── setup.py                                # Installation script
+└── README.md                               # This document
 ```
 
-## 社区与支持
+## Community and Support
 
-1. **提问和讨论**：
+1. **Questions and Discussions**:
    - [GitHub Discussions](https://github.com/QBosonCommunity/kaiwu-basic-examples/discussions)
 
-2. **报告问题**：
+2. **Reporting Issues**:
    - [GitHub Issues](https://github.com/QBosonCommunity/kaiwu-basic-examples/issues)
 
-3. **邮件联系**：
+3. **Contact via Email**:
    - business@boseq.com
 
-## 致谢
+## Acknowledgments
 
-- 感谢所有贡献者的宝贵贡献。
-- 感谢量子计算社区贡献者的支持和反馈。
+- Thanks to all contributors for their valuable contributions.
+- Thanks to the quantum computing community for their support and feedback.
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
+
