@@ -107,7 +107,7 @@ Before you begin, you need to install the `kaiwu-sdk` dependency:
 
 1. **Get the SDK**:
    - Visit the [kaiwu-sdk download page](https://platform.qboson.com/sdkDownload) (account registration required).
-   - See the [kaiwu-sdk installation guide](https://kaiwu.qboson.com/plugin.php?id=knowledge&modac=docs&link=package&name=%E6%A8%A1%E5%9D%97%E6%8C%87%E5%8D%97).
+   - See the [kaiwu-sdk installation guide](https://kaiwu.qboson.com/plugin.php?id=knowledge&modac=docs&link=KaiwuSDK&name=%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B).
 
 2. **Configure Authorization**:
    Obtain your SDK authorization credentials:
